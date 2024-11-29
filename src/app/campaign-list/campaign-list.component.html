@@ -1,0 +1,72 @@
+<table class="campaign-table">
+  <thead class="campaign-table__header">
+    <tr>
+      <th scope="col" class="campaign-table__header-cell">Campaign Name</th>
+      <th scope="col" class="campaign-table__header-cell">Keywords</th>
+      <th scope="col" class="campaign-table__header-cell">Bid Amount</th>
+      <th scope="col" class="campaign-table__header-cell">Campaign Fund</th>
+      <th scope="col" class="campaign-table__header-cell">Status</th>
+      <th scope="col" class="campaign-table__header-cell">Town</th>
+      <th scope="col" class="campaign-table__header-cell">Radius</th>
+      <th scope="col" class="campaign-table__header-cell">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="campaign-table__body">
+    <tr *ngFor="let campaign of campaigns$ | async" class="campaign-table__row">
+      <ng-container *ngIf="(editingID$ | async) === campaign.id; else viewModeTemplate">
+        <td class="campaign-table__cell">
+          <input class="campaign-table__input" [(ngModel)]="campaign.name" />
+        </td>
+        <td class="campaign-table__cell">
+          <input class="campaign-table__input" [(ngModel)]="campaign.keywords" />
+        </td>
+        <td class="campaign-table__cell">
+          <input class="campaign-table__input" type="number" [(ngModel)]="campaign.bidAmount" />
+        </td>
+        <td class="campaign-table__cell">
+          <input class="campaign-table__input" type="number" [(ngModel)]="campaign.campaignFund" />
+        </td>
+        <td class="campaign-table__cell">
+          <select class="campaign-table__select" [(ngModel)]="campaign.status">
+            <option value="on">On</option>
+            <option value="off">Off</option>
+          </select>
+        </td>
+        <td class="campaign-table__cell">
+          <select class="campaign-table__select" [(ngModel)]="campaign.city">
+            <option>Warsaw</option>
+            <option>Krakow</option>
+            <option>Lublin</option>
+            <option>Lodz</option>
+            <option>Poznan</option>
+          </select>
+        </td>
+        <td class="campaign-table__cell">
+          <input class="campaign-table__input" type="number" [(ngModel)]="campaign.radius" />
+        </td>
+        <td class="campaign-table__cell campaign-table__actions">
+          <button class="campaign-table__btn campaign-table__btn--save" (click)="saveCampaign(campaign)">Save</button>
+          <button class="campaign-table__btn campaign-table__btn--cancel" (click)="cancelEdit()">Cancel</button>
+        </td>
+      </ng-container>
+
+      <ng-template #viewModeTemplate>
+        <td class="campaign-table__cell">{{ campaign.name }}</td>
+        <td class="campaign-table__cell">{{ campaign.keywords}}</td>
+        <td class="campaign-table__cell">{{ campaign.bidAmount }}</td>
+        <td class="campaign-table__cell">{{ campaign.campaignFund }}</td>
+        <td class="campaign-table__cell">{{ campaign.status }}</td>
+        <td class="campaign-table__cell">{{ campaign.city }}</td>
+        <td class="campaign-table__cell">{{ campaign.radius }}</td>
+        <td class="campaign-table__cell campaign-table__actions">
+          <button class="campaign-table__btn campaign-table__btn--edit" (click)="editCampaign(campaign.id)">
+            <span class="material-symbols-outlined">edit</span>
+          </button>
+          <button class="campaign-table__btn campaign-table__btn--delete" (click)="deleteCampaign(campaign.id)">
+            <span class="material-symbols-outlined">delete</span>
+          </button>
+        </td>
+      </ng-template>
+    </tr>
+  </tbody>
+</table>

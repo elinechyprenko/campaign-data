@@ -1,0 +1,60 @@
+<form [formGroup]="campaignForm" (ngSubmit)="onSubmit()" class="campaign-form">
+  <div class="campaign-form__group">
+    <label for="campaignName" class="campaign-form__label">Campaign Name:</label>
+    <input id="campaignName" type="text" class="campaign-form__input" formControlName="name"
+      placeholder="Enter campaign name" />
+    <div *ngIf="campaignForm.get('name')?.invalid && campaignForm.get('name')?.touched" class="campaign-form__error">Campaign name is required.</div>
+  </div>
+
+  <div class="campaign-form__group">
+    <label for="keywords" class="campaign-form__label">Keywords:</label>
+    <input id="keywords" type="text" class="campaign-form__input" formControlName="keywords"
+      placeholder="Enter keywords" list="keywordsList" (input)="updateSearch($event)" />
+    <datalist id="keywordsList" class="campaign-form__datalist">
+      <option *ngFor="let keyword of keyValue | async" [value]="keyword"></option>
+    </datalist>
+    <div *ngIf="campaignForm.get('keywords')?.invalid && campaignForm.get('keywords')?.touched" class="campaign-form__error">Keywords are required.</div>
+  </div>
+
+  <div class="campaign-form__group">
+    <label for="bidAmount" class="campaign-form__label">Bid Amount:</label>
+    <input id="bidAmount" type="number" class="campaign-form__input" formControlName="bidAmount"
+      placeholder="Enter bid amount" min="1" />
+    <div *ngIf="campaignForm.get('bidAmount')?.invalid &&campaignForm.get('bidAmount')?.touched" class="campaign-form__error">Bid amount must be at least 1.</div>
+  </div>
+
+  <div class="campaign-form__group">
+    <label for="campaignFund" class="campaign-form__label">Campaign Fund:</label>
+    <input id="campaignFund" type="number" class="campaign-form__input" formControlName="campaignFund"
+      (change)="onCampaignFundChange(campaignForm.value.campaignFund)" placeholder="Enter campaign fund" />
+    <div *ngIf="campaignForm.get('campaignFund')?.invalid && campaignForm.get('campaignFund')?.touched" class="campaign-form__error">Campaign fund is required.</div>
+  </div>
+  <div class="campaign-form__info">
+    <span class="campaign-form__balance">Emerald Balance: {{ emeraldBalance$ | async }}</span>
+  </div>
+
+  <div class="campaign-form__group">
+    <label for="status" class="campaign-form__label">Status:</label>
+    <select id="status" class="campaign-form__select" formControlName="status">
+      <option value="on">On</option>
+      <option value="off">Off</option>
+    </select>
+    <div *ngIf="campaignForm.get('status')?.invalid && campaignForm.get('status')?.touched" class="campaign-form__error">Status is required.</div>
+  </div>
+
+  <div class="campaign-form__group">
+    <label for="city" class="campaign-form__label">City:</label>
+    <select id="city" class="campaign-form__select" formControlName="city">
+      <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+    </select>
+    <div *ngIf="campaignForm.get('city')?.invalid && campaignForm.get('city')?.touched" class="campaign-form__error">Town is required.</div>
+  </div>
+
+  <div class="campaign-form__group">
+    <label for="radius" class="campaign-form__label">Radius (in km):</label>
+    <input id="radius" type="number" class="campaign-form__input" formControlName="radius" placeholder="Enter radius" />
+    <div *ngIf="campaignForm.get('radius')?.invalid && campaignForm.get('radius')?.touched" class="campaign-form__error">Radius is required.</div>
+  </div>
+
+  <button type="submit" class="campaign-form__submit" [disabled]="campaignForm.invalid">Submit</button>
+</form>

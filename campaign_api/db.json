@@ -1,0 +1,187 @@
+{
+  "campaigns": [
+    {
+      "id": "2",
+      "name": "Summer Essentials Promo",
+      "keywords": [
+        "summer",
+        "promo",
+        "essentials"
+      ],
+      "bidAmount": 2,
+      "campaignFund": 500,
+      "status": "disabled",
+      "city": "Kraków",
+      "radius": 30,
+      "emeraldAccountBalance": 3000
+    },
+    {
+      "id": "3",
+      "name": "Spring Fashion Campaign",
+      "keywords": [
+        "spring",
+        "fashion",
+        "apparel"
+      ],
+      "bidAmount": 4,
+      "campaignFund": 700,
+      "status": "enabled",
+      "city": "Gdańsk",
+      "radius": 40,
+      "emeraldAccountBalance": 4500
+    },
+    {
+      "id": "4",
+      "name": "Autumn Discounts",
+      "keywords": [
+        "autumn",
+        "discounts",
+        "sales"
+      ],
+      "bidAmount": 3.5,
+      "campaignFund": 600,
+      "status": "enabled",
+      "city": "Wrocław",
+      "radius": 60,
+      "emeraldAccountBalance": 3700
+    },
+    {
+      "id": "5",
+      "name": "Holiday Gift Ideas",
+      "keywords": [
+        "holiday",
+        "gifts",
+        "shopping"
+      ],
+      "bidAmount": 6,
+      "campaignFund": 1200,
+      "status": "disabled",
+      "city": "Poznań",
+      "radius": 35,
+      "emeraldAccountBalance": 4900
+    },
+    {
+      "id": "6",
+      "name": "Black Friday Deals",
+      "keywords": [
+        "black friday",
+        "deals",
+        "electronics"
+      ],
+      "bidAmount": 7,
+      "campaignFund": 1500,
+      "status": "enabled",
+      "city": "Łódź",
+      "radius": 45,
+      "emeraldAccountBalance": 5200
+    },
+    {
+      "id": "7",
+      "name": "Cyber Monday Offers",
+      "keywords": "cyber monday,online,offers",
+      "bidAmount": 4.5,
+      "campaignFund": 800,
+      "status": "disabled",
+      "city": "Kraków",
+      "radius": 50,
+      "emeraldAccountBalance": 3000
+    },
+    {
+      "id": "8",
+      "name": "Christmas Specials",
+      "keywords": [
+        "christmas",
+        "specials",
+        "gifts"
+      ],
+      "bidAmount": 5.5,
+      "campaignFund": 900,
+      "status": "enabled",
+      "city": "Katowice",
+      "radius": 40,
+      "emeraldAccountBalance": 4400
+    }
+  ],
+  "keywords": [
+    {
+      "id": "1",
+      "name": "Organic Food"
+    },
+    {
+      "id": "2",
+      "name": "Luxury Watches"
+    },
+    {
+      "id": "3",
+      "name": "Handmade Jewelry"
+    },
+    {
+      "id": "4",
+      "name": "Home Decor"
+    },
+    {
+      "id": "5",
+      "name": "Fitness Equipment"
+    },
+    {
+      "id": "6",
+      "name": "Eco-Friendly Products"
+    },
+    {
+      "id": "7",
+      "name": "Smartphones"
+    },
+    {
+      "id": "8",
+      "name": "Gaming Consoles"
+    },
+    {
+      "id": "9",
+      "name": "Pet Supplies"
+    },
+    {
+      "id": "10",
+      "name": "Kids Toys"
+    },
+    {
+      "id": "11",
+      "name": "Travel Accessories"
+    },
+    {
+      "id": "12",
+      "name": "Online Courses"
+    },
+    {
+      "id": "13",
+      "name": "Digital Marketing Services"
+    },
+    {
+      "id": "14",
+      "name": "Car Accessories"
+    },
+    {
+      "id": "15",
+      "name": "Office Furniture"
+    },
+    {
+      "id": "16",
+      "name": "Baking Supplies"
+    },
+    {
+      "id": "17",
+      "name": "Outdoor Gear"
+    },
+    {
+      "id": "18",
+      "name": "Vegan Skincare"
+    },
+    {
+      "id": "19",
+      "name": "Electric Vehicles"
+    },
+    {
+      "id": "20",
+      "name": "Photography Equipment"
+    }
+  ]
+}

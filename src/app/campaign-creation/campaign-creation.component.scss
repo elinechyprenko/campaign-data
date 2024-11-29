@@ -1,0 +1,74 @@
+.campaign-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 40px;
+  border: 1px solid #f9f9f9;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+
+  &__group {
+    margin-bottom: 15px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000000;
+  }
+
+  &__input,
+  &__select {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  &__input:focus,
+  &__select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  &__error {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  &__info {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  &__balance {
+    font-weight: bold;
+  }
+
+  &__submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__submit:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+
+  &__submit:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+}
