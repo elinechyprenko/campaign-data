@@ -61,14 +61,68 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+
+    &:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: #0056b3;
+    }
   }
 
-  &__submit:disabled {
-    background-color: #6c757d;
-    cursor: not-allowed;
+  @media (max-width: 768px) {
+    max-width: 500px;
+    padding: 30px;
+
+    &__label {
+      font-size: 13px;
+    }
+
+    &__input,
+    &__select {
+      font-size: 11px;
+    }
   }
 
-  &__submit:hover:not(:disabled) {
-    background-color: #0056b3;
+  @media (max-width: 576px) {
+    max-width: 100%;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: none;
+    border: none;
+
+    &__label {
+      font-size: 12px;
+    }
+
+    &__info {
+      font-size: 13px;
+    }
+
+    &__submit {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 800px;
+    padding: 50px;
+
+    &__label {
+      font-size: 16px;
+    }
+
+    &__input,
+    &__select {
+      font-size: 14px;
+    }
+
+    &__submit {
+      font-size: 16px;
+      padding: 12px;
+    }
   }
 }

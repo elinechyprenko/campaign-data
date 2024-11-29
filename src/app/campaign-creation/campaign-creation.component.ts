@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule} from '@angular/common';
-import { BehaviorSubject, catchError, debounceTime, distinctUntilChanged, exhaustMap, map, take } from 'rxjs';
+import { BehaviorSubject, distinctUntilChanged, exhaustMap, map, take } from 'rxjs';
 import { CampaignService } from '../services/campaign.service';
 
 @Component({

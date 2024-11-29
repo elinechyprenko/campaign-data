@@ -79,27 +79,12 @@
       "id": "7",
       "name": "Cyber Monday Offers",
       "keywords": "cyber monday,online,offers",
-      "bidAmount": 4.5,
+      "bidAmount": 4.3,
       "campaignFund": 800,
       "status": "disabled",
       "city": "Kraków",
       "radius": 50,
       "emeraldAccountBalance": 3000
-    },
-    {
-      "id": "8",
-      "name": "Christmas Specials",
-      "keywords": [
-        "christmas",
-        "specials",
-        "gifts"
-      ],
-      "bidAmount": 5.5,
-      "campaignFund": 900,
-      "status": "enabled",
-      "city": "Katowice",
-      "radius": 40,
-      "emeraldAccountBalance": 4400
     }
   ],
   "keywords": [
